@@ -1,0 +1,139 @@
+# Site settings
+baseurl = "http://lm-agenda.cfapps.io/"
+languageCode = "en-us"
+title = "Cognizant Cloud Native Workshop"
+theme = "hugo-theme-multi-page-workshop"
+copyright = "Copyright (c) 2015, Pivotal; All rights reserved."
+
+[params]
+
+    	# You can use Markdown syntax for urls [text](//url.to/source) for
+    	# most longer texts.
+
+    	# To provide some metadata for search engines feel free to add a few
+        # information about you and your website.
+    name = "Yadhav Jayaraman"
+    date = "2016-05-06T07:07:18-04:00"
+    venue = ""
+    dates = "June 1 2016 / DOVER-0096-01F-R600-24 @ 100 (Dover East building), Liberty way, Dover, NH"
+    customer_logo="liberty_mutual.png"
+    mainMenu = ["Day1", "Lab Requirements", "CF cli"]
+    noCategoryLink = true
+    #feedbackLink = "https://docs.google.com/forms/d/1KG88z2eWfG2Rx0guENzKgzeu6VlMjhRyW2PiJoCbtxI/viewform?entry.1504550910&entry.108151957&entry.1907066466=Liberty+Mutual&entry.1934264208&entry.2083454847&entry.1484855815&entry.1880096690&entry.879050699"
+
+
+	# Sessions for the agenda section
+    [[params.days]]
+        day = "Day1"
+
+    [[params.days.sessions]]
+        title = "Morning Session"
+
+        [[params.days.sessions.exercises]]
+            title = ""
+
+            [[params.days.sessions.exercises.labs]]
+                title = "_9:30 AM - 10:00 AM: General Overview_"
+                slides = "/slides/session1/pcf-overview.pdf"
+
+            [[params.days.sessions.exercises.labs]]
+                title = "_10:00 AM - 10:30 AM: PCF Elastic Runtime Architecture_"
+                slides = "/slides/session1/pcf-arch.pdf"
+
+            [[params.days.sessions.exercises.labs]]
+                title = "_10:30 AM - 11:00 AM: Deeper concepts - comparison to Docker, CI/CD_"
+                sslides = "/slides/session1/containers.pdf"
+
+            [[params.days.sessions.exercises.labs]]
+                title = "_11:00 AM - 12:00 PM: Cloud Native Apps and App Migration_"
+                mslides = "/slides/session1/pcf-overview.pdf"
+
+
+    [[params.days.sessions]]
+        title = "Afternoon Session"
+
+        [[params.days.sessions.exercises]]
+            title = "_12:30 PM - 4:30 PM: PCF Developer Experience w/ Hands on Labs_"
+          
+            [[params.days.sessions.exercises.labs]]
+                title = "CLI Basics"
+                slides = "http://sl02.cfapps.io/cf-cli/index.html#"
+                lab = "/lab_101"
+
+            [[params.days.sessions.exercises.labs]]
+                title = "Apps Manager Console - Orgs, Spaces, Users, and Roles"
+                slides = "http://sl02.cfapps.io/orgs-spaces/index.html#"
+                lab = "/lab_102"
+
+            [[params.days.sessions.exercises.labs]]
+                title = "Deploy a simple application"
+                slides = "http://sl02.cfapps.io/pushing/index.html#"
+                lab = "/lab_103"
+
+            [[params.days.sessions.exercises.labs]]
+                title = "Application Manifests"
+                lab = "/lab_104"
+
+            [[params.days.sessions.exercises.labs]]
+                title = "Binding to Services"
+                slides = "/slides/session1/services.pdf"
+                lab = "/lab_105"
+
+
+        [[params.days.sessions.exercises]]
+            title = "_4:30 PM - 5:00 PM Developing Cloud Native Apps w/ Spring Boot and Spring Cloud_"
+            
+
+            [[params.days.sessions.exercises.labs]]
+                title = "Cloud Native Architecture"
+                slides = "/slides/session2/cloud-native-architecture.pdf"
+
+            [[params.days.sessions.exercises.labs]]
+                title = "**Wrap up**"
+
+
+    [[params.resourcelinks]]
+        name = "CF CLI Documentation"
+        url = "https://docs.pivotal.io/pivotalcf/cf-cli/getting-started.html"
+
+    [[params.resourcelinks]]
+        name = "Git"
+        url = "https://www.git-scm.com"
+
+    [[params.resourcelinks]]
+        name = "Git Lessons"
+        url = "https://try.github.io/levels/1/challenges/1"
+
+    [[params.resourcelinks]]
+        name = "Spring Platform"
+        url = "http://platform.spring.io/platform/"
+
+    [[params.resourcelinks]]
+        name = "Spring Docs"
+        url = "https://spring.io/docs"
+
+    [[params.resourcelinks]]
+        name = "Spring Initializer"
+        url = "http://start.spring.io/"
+
+    [[params.resourcelinks]]
+        name = "Spring Cloud at Netflix"
+        url = "https://spring.io/blog/2015/10/19/springone2gx-2015-replay-spring-cloud-at-netflix"
+
+    [[params.resourcelinks]]
+        name = "Microservices with Spring"
+        url = "https://spring.io/blog/2015/07/14/microservices-with-spring"
+
+    [[params.resourcelinks]]
+         name = "Spring Guides"
+         url = "https://spring.io/guides#tutorials"
+
+    [[params.resourcelinks]]
+        name = "Pivotal Network"
+        url = "https://network.pivotal.io/"
+
+    [[params.resourcelinks]]
+        name = "Pivotal Documentation"
+        url = "http://docs.pivotal.io"
+
+

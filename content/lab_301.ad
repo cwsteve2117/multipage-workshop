@@ -1,0 +1,86 @@
++++
+categories = ["general"]
+date = "2016-05-11T06:07:56-04:00"
+tags = ["document"]
+title = "Lab301"
+type = "lab"
++++
+
+## Lab 01 - Getting Started with Spring Boot
+
+NOTE: The completed code for this lab can be found at `$COURSE_HOME/spring-boot-basics/final/springbox-catalog`.
+
+[abstract]
+--
+We'll begin the first subproject of our complete cloud-native application architecture: _SpringBox_, which implements the movie browsing portion of a ``Redbox-like'' website.
+This microservice will provide the _Movie Catalog Service_, which will allow us to browse movies by genre, browse an individual movie's details, and search for movies.
+
+We'll be using the http://grouplens.org/datasets/movielens/[MovieLens] dataset, and we'll model it's `Movie` and `Genre` concepts in this microservice.
+
+---
+***Approximate time: 10 minutes***
+--
+
+
+## `Exercises`  
+
+### `Generate a project`
+
+. In your browser, visit http://start.spring.io.
+
+. Fill out the *Project metadata* fields as follows:
++
+Generate :: Maven Project
+Spring Boot :: 1.3.3
+Group:: `lab`
+Artifact:: `springbox-catalog`
+Dependencies:: `Web`
+
+. Click the *Generate Project* button. Your browser will download a zip file.
+Unpack that zip file at `$COURSE_HOME/spring-boot-basics/initial`.
+
+### `Add a Rest end point`
+
+. cd to the directory `$COURSE_HOME/spring-boot-basics/initial/springbox-catalog`.
+
+. Import the project's `pom.xml` into your editor/IDE of choice.
++
+[source,shell]
+----
+mvn eclipse:eclipse
+----
+
+. Add a `@RestController` annotation to the class `lab.SpringboxCatalogApplication`.
+
+. Add the following request handler to the class `lab.SpringboxCatalogApplication`:
++
+[source,java]
+----
+@RequestMapping("/")
+public String greeting() {
+    return "Hello World!";
+}
+----
+
+### `Test the Hello World Endpoint`
+
+. Build and run the application:
++
+----
+$ mvn spring-boot:run
+----
+
+
+. Try out the following endpoint. The output is omitted here:
++
+http://localhost:8080:: Says `Hello, World`
+
+=== `Clean Up`
+
+Let's clean up our application so that we can have a clean start for the next lab 
+
+. Delete the project from your IDE
+
+
+*Congratulations!*
+You've just completed your first Spring Boot application.

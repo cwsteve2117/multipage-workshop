@@ -1,0 +1,67 @@
++++
+categories = ["general"]
+date = "2016-03-23T19:58:14-04:00"
+tags = ["document"]
+title = "Lab101"
+type = "lab"
++++
+
+## Lab 01 - Command Line Interface
+
+
+## `Goal`
+--
+Install the command line interface (CLI) and log into *PWS* Env.
+
+Approximate time: 10 minutes
+--
+
+
+## `Exercise`  
+
+### `Install the CLI`
+
+
+. Check to see if you have a CLI already installed. Open a terminal/command window and type `cf --version`. If you see that you have an installed version of 6.x or greater, you can skip the install.
+
+. Go to https://github.com/cloudfoundry/cli/releases or https://console.run.pivotal.io/tools. Download and run the installer for your platform.
+
+. Verify your install by opening a terminal/command window and typing `cf --version`. You now have a Cloud Foundry client that can communicate with any Cloud Foundry installation.
+
+### `Explore cf help`
+. Type `cf help`. Scroll through the list of commands available to the CLI. Notice that they are organized by category. You will become familiar with most of the categories in this course.
+
+. Type `cf help login`. Use this approach whenever you need a refresher on any of the CLI commands. Because login has an alias, you could have also have typed cf help l.
+
+### `Log into *PWS* from a browser`
+. In a browser, navigate to https://console.run.pivotal.io and login with your username and password
+
+. In *PWS*, click on the Tools tab on the left menu column to see the connection information for the CLI. You will use this information to login to the CLI (in fact, you can copy and paste from this window).
+
+### `Log into *PWS* with the CLI`
+. Use the CLI’s cf login command to log in to your *PWS* account (you may have to logout first). You can use the information from the browser window to help you, and you can use cf help login.
+
+. If you are on a network that requires a proxy, set the proxy as an environment variable:
++
+----
+export HTTP_PROXY={HTTP_PROXY}
+----
+
+. Set the API target for the CLI:
++
+----
+$ cf login -a {CF-API-URL} --skip-ssl-validation
+----
+
+. Use the username and password that you created.
+. Follow the steps above for login.
+
+Once you have logged in, type cf target to view your current API endpoint, User, Org and Space.
+
+### `View the .cf directory`
+. On your local machine’s file system, navigate to your home directory and find the .cf directory. It may be hidden depending on your settings.
+
+. Open the config.json file and notice that your connection settings are cached in that file.
+
+### `If you have time`
+. Browse the commands in cf help and see what you discover.

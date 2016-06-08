@@ -1,0 +1,38 @@
++++
+categories = ["general"]
+date = "2016-05-11T05:26:17-04:00"
+tags = ["document"]
+title = "Lab104"
+type = "lab"
++++
+
+## Lab 04 - Use an Application Manifest
+
+
+[abstract]
+--
+In this lab we will run cf push with an application manifest in your application directory, setting different attributes.
+
+
+---
+***Approximate time: 10 minutes***
+--
+
+
+## `Exercises`  
+
+### `Set a different hostname`
+. Edit the application manifest for your simple application. Set the hostname to a different one.
+
+. Run cf push and verify that the manifest settings are working.
+
+
+### `Update other attributes`
+. Read the manifest options at <http://docs.pivotal.io/pivotalcf/1-7/devguide/deploy-apps/manifest.html>
+. Try the following with your manifest and see how it is working
+  .. Remove the buildpack attribute
+  .. increase the instance count to 2
+  .. increase the memory
+  .. remove the hostname and set random-route: true
+  .. set optional env variables
+ 
